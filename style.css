@@ -1,0 +1,20 @@
+.imgcard {
+    text-align: center;
+    cursor: pointer;
+    border-style: outset;
+    border-color: #7b7fa2;
+    border-width: 5px;
+    border-radius: 8px;
+    padding: 5px;
+    width: 300px;
+
+}
+
+.card {
+    background-color: white;
+    padding: 0 25px 10px;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+    width: 300px;
+}
