@@ -1,16 +1,23 @@
 const parseData = JSON.parse(data);
 const docEL = document.querySelector('body');
-parseData.forEach(element => {
-    let topp = [];
-    element.topping.forEach(element => {
-        topp.push(element.type);
-    });
-    docEL.insertAdjacentHTML('beforeend', `
 
-        <h2>${element.name}</h2>
-        <img class ="imgcard" src = "${element.image}"></img>
-        <p class = "card">Delicious ${element.type} ${element.name}. Toppings may include: ${topp.join(" - ")}</p>
-    `)
-});
-console.log(parseData);
+
+const URL = `http://universities.hipolabs.com/search?country=Ireland`;
+
+fetch(URL)
+    .then((response) => response.json())
+    .then((json) => {
+
+        json.forEach(element => {
+            docEL.insertAdjacentHTML('beforeend', `
+                <h2 class = "imgcard">${element.name}</h2>
+                <p class = "card">${element.web_pages[0]}</p>
+                `)
+        });
+    })
+    .catch((error) => {
+        console.log('Error');
+    });
+
+
 
