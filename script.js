@@ -1,4 +1,4 @@
-const parseData = JSON.parse(data);
+
 const docEL = document.querySelector('body');
 
 
